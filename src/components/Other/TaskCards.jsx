@@ -6,10 +6,10 @@ import FailedTask from '../TaskList/FailedTask'
 
 const TaskCards = ({ data }) => {
     return (
-        <div className='h-1/2 w-full  mt-10 p-10 flex gap-4 overflow-scroll hide-scrollbar'>
-            {data.tasks.map((elem, idx) => {
+        <div id='tasklist' className='h-[50%] overflow-x-auto flex items-center justify-start gap-5 flex-nowrap w-full py-5 mt-10'>
+            {data.tasks?.map((elem, idx) => {
                 if (elem.active) {
-                    return <AcceptTask key={idx} data={elem}  />
+                    return <AcceptTask key={idx} data={elem} />
                 }
                 if (elem.newTask) {
                     return <NewTask key={idx} data={elem} />

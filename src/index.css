@@ -15,6 +15,15 @@ body{
   scrollbar-width: none;      /* Firefox */
 }
 
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;              /* Chrome, Safari */
+}
+
+#tasklist::-webkit-scrollbar {
+    display: none;
+}
+#tasklist {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

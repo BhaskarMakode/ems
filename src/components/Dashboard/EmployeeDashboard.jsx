@@ -3,12 +3,12 @@ import EmployeeHeader from '../Other/EmployeeHeader'
 import TaskListCount from '../Other/TaskListCount'
 import TaskCards from '../Other/TaskCards'
 
-const EmployeeDashboard = ({data}) => {
+const EmployeeDashboard = (props) => {
   return (
     <>
-      <EmployeeHeader data={data} />
-      <TaskListCount data={data} />
-      <TaskCards data={data}/>
+      <EmployeeHeader data={props.data} changeUser={props.changeUser}  />
+      <TaskListCount data={props.data}  />
+      <TaskCards data={props.data}  />
     </>
   )
 }
